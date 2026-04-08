@@ -25,6 +25,10 @@
     overflow-x: hidden;
   }
 
+  .section {
+    scroll-margin-top: 72px;
+  }
+
   /* HERO */
   .hero {
     background: var(--teal);
@@ -435,10 +439,142 @@
     margin: 0;
   }
 
-  @media (max-width: 600px) {
-    .hero, .section { padding-left: 20px; padding-right: 20px; }
-    .nav-wrap { padding: 0 8px; }
-    .stat-row { grid-template-columns: repeat(2, 1fr); }
+  @media (max-width: 900px) {
+    .hero {
+      padding: 64px 28px 48px;
+    }
+
+    .section {
+      padding: 60px 28px;
+    }
+
+    .nav-wrap {
+      padding: 0 16px;
+    }
+
+    .hero::before {
+      width: 320px;
+      height: 320px;
+      top: -120px;
+      right: -120px;
+    }
+
+    .hero::after {
+      width: 160px;
+      height: 160px;
+      left: 24px;
+    }
+  }
+
+  @media (max-width: 640px) {
+    .hero,
+    .section {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+
+    .hero {
+      padding-top: 52px;
+      padding-bottom: 40px;
+    }
+
+    .hero-meta {
+      gap: 10px;
+      margin-top: 24px;
+    }
+
+    .meta-chip {
+      font-size: 12px;
+      padding: 7px 12px;
+    }
+
+    .nav-wrap {
+      padding: 0 8px;
+    }
+
+    .nav-pill {
+      padding: 14px 14px;
+      font-size: 11px;
+    }
+
+    .card {
+      padding: 20px;
+    }
+
+    .highlight {
+      padding: 22px 20px;
+    }
+
+    .callout {
+      padding: 18px 16px;
+    }
+
+    .timeline {
+      padding-left: 20px;
+    }
+
+    .timeline::before {
+      left: 6px;
+    }
+
+    .tl-item {
+      padding: 0 0 24px 18px;
+    }
+
+    .tl-dot {
+      left: -20px;
+      width: 14px;
+      height: 14px;
+    }
+
+    .hyp-item {
+      flex-wrap: wrap;
+      gap: 10px;
+      padding: 16px;
+    }
+
+    .hyp-badge {
+      margin-left: 0;
+      margin-top: 2px;
+    }
+
+    .stat-row {
+      grid-template-columns: 1fr;
+    }
+
+    .limit-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .footer {
+      padding: 28px 20px;
+    }
+  }
+
+  @media (max-width: 420px) {
+    .hero-label {
+      letter-spacing: 2px;
+      padding: 6px 12px;
+    }
+
+    .hero h1 {
+      line-height: 1.15;
+    }
+
+    .section-intro,
+    .highlight p,
+    .callout,
+    .card p,
+    .tl-item p {
+      font-size: 14px;
+      line-height: 1.65;
+    }
+
+    .badge-num {
+      width: 32px;
+      height: 32px;
+      font-size: 13px;
+    }
   }
 </style>
 </head>
